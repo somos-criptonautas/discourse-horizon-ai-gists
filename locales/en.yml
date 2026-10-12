@@ -1,0 +1,5 @@
+en:
+  theme_metadata:
+    description: "Shows discourse-ai topic gists on Horizon's topic cards, which drop the outlets discourse-ai renders into."
+    settings:
+      gist_hidden_categories: "Categories whose topics never show an AI gist, and whose lists drop the excerpt too (a title-only index). Cosmetic only: gists are still generated and still sent in the topic list payload."

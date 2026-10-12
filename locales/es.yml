@@ -1,0 +1,5 @@
+es:
+  theme_metadata:
+    description: "Muestra los resúmenes (gists) de discourse-ai en las tarjetas de tema de Horizon, que eliminan los outlets donde discourse-ai los renderiza."
+    settings:
+      gist_hidden_categories: "Categorías cuyos temas nunca muestran un resumen de IA y cuyas listas tampoco muestran el extracto (un índice solo de títulos). Solo cosmético: los resúmenes se siguen generando y enviando en la lista de temas."

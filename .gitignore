@@ -1,0 +1,6 @@
+.env
+.devcontainer/*
+.claude/*
+node_modules
+.discourse-site
+.eslintcache
