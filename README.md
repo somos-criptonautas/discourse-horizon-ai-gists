@@ -1,10 +1,12 @@
 # Horizon AI Gists
 
+**ENGLISH** | [ESPAÑOL](README.es.md)
+
 Shows [discourse-ai](https://meta.discourse.org/t/summarize-gists/340269) topic gists
 (short AI summaries) on the [Horizon](https://meta.discourse.org/t/horizon-theme/360486)
 theme's topic cards.
 
-Maintained by Criptonautas. Not affiliated with or endorsed by Discourse.
+Maintained by Criptonautas. Not affiliated with or endorsed by Discourse (Civilized Discourse Construction Kit, Inc.).
 
 ## Why
 
@@ -67,4 +69,6 @@ add it to Horizon.
 
 ## License
 
-[MIT](LICENSE).
+MIT. See [LICENSE](LICENSE).
+
+Text of this README under [CC BY-NC-SA 4.0](CC-BY-NC-SA-4.0.txt).
