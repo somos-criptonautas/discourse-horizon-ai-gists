@@ -3,7 +3,6 @@ import { schedule } from "@ember/runloop";
 import { service } from "@ember/service";
 import bodyClass from "discourse/helpers/body-class";
 import { apiInitializer } from "discourse/lib/api";
-import ExcerptState from "../lib/excerpt-state";
 
 // Horizon's high-context card deletes core's TopicCell, taking with it both outlets
 // discourse-ai renders gists into (topic-list-topic-cell-link-bottom-line__before on
@@ -87,12 +86,6 @@ function currentCategoryId() {
 }
 
 export default apiInitializer((api) => {
-  // Only stand in for excerptState when no other component provides it, so installing
-  // the real topic-list-excerpts component later cannot clash with this one.
-  if (!api.container.hasRegistration("service:excerpt-state")) {
-    api.container.register("service:excerpt-state", ExcerptState);
-  }
-
   // The button only labels a state "AI" when the stored preference is literally
   // "table-ai"; unset reads as Compact while gists show. Persist the default so the
   // label matches (this also makes gists the default on non-Horizon lists).

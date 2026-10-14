@@ -31,8 +31,8 @@ que conserva la tarjeta.
 Con [Topic Excerpts & AI Gists Button](https://meta.discourse.org/t/topic-excerpts-ai-gists-button/394885)
 instalado, los miembros pueden alternar entre **Compacto** (solo títulos), **Extractos** y
 **Resúmenes de IA**. Ese botón espera un servicio `excerptState` que no incluye; este
-componente aporta uno, salvo que otro componente ya lo haga. Sin el botón, los resúmenes
-simplemente se muestran.
+componente aporta uno, así que no lo instales junto a otro componente que defina
+`excerptState`. Sin el botón, los resúmenes simplemente se muestran.
 
 ## Requisitos
 

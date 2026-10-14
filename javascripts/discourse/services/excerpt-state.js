@@ -3,9 +3,8 @@ import Service from "@ember/service";
 
 // Stand-in for the `excerptState` service the "Topic Excerpts & AI Gists Button"
 // component injects but does not ship (it expects a topic-list-excerpts component
-// built for core's list, not Horizon's cards). Lives in lib/, not services/, so it is
-// only registered when nothing else provides `service:excerpt-state` — see the
-// initializer. Only the two members the button uses.
+// built for core's list, not Horizon's cards). Only the two members the button uses.
+// A component that also defines service:excerpt-state should not be installed alongside.
 const KEY = "horizonPrefersExcerpt";
 
 function stored() {

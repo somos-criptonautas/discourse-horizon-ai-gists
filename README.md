@@ -31,8 +31,8 @@ treats as expected behaviour. This component renders the gist into
 With [Topic Excerpts & AI Gists Button](https://meta.discourse.org/t/topic-excerpts-ai-gists-button/394885)
 installed, members can switch between **Compact** (titles only), **Excerpts** and
 **AI summaries**. That button expects an `excerptState` service it does not ship; this
-component provides one, unless another component already does. Without the button,
-gists simply show.
+component provides one — so don't install it alongside another component that defines
+`excerptState`. Without the button, gists simply show.
 
 ## Requirements
 
