@@ -24,10 +24,13 @@ import { apiInitializer } from "discourse/lib/api";
 
 // Category ids as strings: compared both to path segments and to topic.category_id.
 // Client-side only — discourse-ai has no per-category scoping, so the gist is still
-// generated and still sent; this suppresses rendering, not cost.
-const HIDDEN_CATEGORIES = new Set(
-  (settings.gist_hidden_categories || "").split("|").filter(Boolean)
-);
+// generated and still sent; this suppresses rendering, not cost. Read on each use, not
+// at import, so a changed setting (and the tests) take effect without a reload.
+function isHiddenCategory(id) {
+  return (settings.gist_hidden_categories || "")
+    .split("|")
+    .includes(String(id));
+}
 
 class HorizonAiGist extends Component {
   // Optional-chained: absent when discourse-ai is disabled.
@@ -36,7 +39,7 @@ class HorizonAiGist extends Component {
   // discourse-ai's layout preference: "table" (compact) or "table-ai". Unset counts as
   // show, so the excerpts/gists button is an opt-out.
   get show() {
-    if (HIDDEN_CATEGORIES.has(String(this.args.topic?.category_id))) {
+    if (isHiddenCategory(this.args.topic?.category_id)) {
       return false;
     }
     return this.gists?.currentPreference !== "table";
@@ -114,7 +117,7 @@ export default apiInitializer((api) => {
       const id = currentCategoryId();
       document.body.classList.toggle(
         "horizon-no-gists",
-        !!id && HIDDEN_CATEGORIES.has(id)
+        !!id && isHiddenCategory(id)
       );
     });
   });
