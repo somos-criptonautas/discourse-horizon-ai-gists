@@ -2,10 +2,10 @@
 
 [ENGLISH](README.md) | **ESPAÑOL**
 
+Mantenido por Criptonautas. Sin afiliación ni respaldo de Discourse (Civilized Discourse Construction Kit, Inc.).
+
 Muestra los resúmenes cortos de IA de [discourse-ai](https://meta.discourse.org/t/summarize-gists/340269)
 (gists) en las tarjetas de tema del tema [Horizon](https://meta.discourse.org/t/horizon-theme/360486).
-
-Mantenido por Criptonautas. Sin afiliación ni respaldo de Discourse (Civilized Discourse Construction Kit, Inc.).
 
 ## Por qué
 
@@ -68,6 +68,11 @@ fetch("/latest.json").then((r) => r.json()).then((d) =>
 
 **Administración → Apariencia → Temas y componentes → Instalar**, desde la URL de este
 repositorio, y luego agrégalo a Horizon.
+
+## Desarrollo
+
+`pnpm install && pnpm lint`. La CI también ejecuta las pruebas QUnit de `test/` y la
+especificación de funciones del núcleo. Las notas para colaborar están en [AGENTS.md](AGENTS.md).
 
 ## Licencia
 

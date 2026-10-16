@@ -2,11 +2,11 @@
 
 **ENGLISH** | [ESPAÑOL](README.es.md)
 
+Maintained by Criptonautas. Not affiliated with or endorsed by Discourse (Civilized Discourse Construction Kit, Inc.).
+
 Shows [discourse-ai](https://meta.discourse.org/t/summarize-gists/340269) topic gists
 (short AI summaries) on the [Horizon](https://meta.discourse.org/t/horizon-theme/360486)
 theme's topic cards.
-
-Maintained by Criptonautas. Not affiliated with or endorsed by Discourse (Civilized Discourse Construction Kit, Inc.).
 
 ## Why
 
@@ -66,6 +66,11 @@ fetch("/latest.json").then((r) => r.json()).then((d) =>
 
 **Admin → Appearance → Themes & components → Install**, from this repository's URL, then
 add it to Horizon.
+
+## Development
+
+`pnpm install && pnpm lint`. CI also runs the QUnit tests in `test/` and the core
+features spec. Contributor notes are in [AGENTS.md](AGENTS.md).
 
 ## License
 
